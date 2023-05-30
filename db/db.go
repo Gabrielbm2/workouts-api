@@ -10,14 +10,14 @@ import (
 )
 
 var (
-	db *pgx.Conn
+	database *pgx.Conn
 )
 
 func GetDatabase() *pgx.Conn {
-	if db == nil {
+	if database == nil {
 		Connect()
 	}
-	return db
+	return database
 }
 
 func Connect() {
@@ -27,5 +27,5 @@ func Connect() {
 		fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
 		os.Exit(1)
 	}
-	db = conn
+	database = conn
 }

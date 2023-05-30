@@ -8,12 +8,13 @@ import (
 	_ "github.com/lib/pq"
 )
 
-type UserRegister struct {
-	Nome      string `json:"nome"`
-	Sobrenome string `json:"sobrenome"`
-	Email     string `json:"email"`
-	Cpf       string `json:"cpf"`
-	Senha     string `json:"senha"`
+type User struct {
+	Nome       string `json:"nome"`
+	Sobrenome  string `json:"sobrenome"`
+	Email      string `json:"email"`
+	Cpf        string `json:"cpf"`
+	Senha      string `json:"senha"`
+	Identifier string
 }
 
 func CreateUserTable() error {

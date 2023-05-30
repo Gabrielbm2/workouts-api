@@ -6,8 +6,6 @@ import (
 	"net/http"
 )
 
-//O package "routes" define as rotas (endpoints) da aplicação, mapeando cada uma para a função correspondente em "controllers" e incluindo também uma rota para servir arquivos estáticos.
-
 func LoadRoutes(routes *chi.Mux) {
 	routes.Get("/ping", func(w http.ResponseWriter, r *http.Request) {
 		_, _ = w.Write([]byte("pong"))

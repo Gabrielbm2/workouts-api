@@ -1,8 +1,8 @@
 package models
 
 import (
+	"CadastroGo/db"
 	"context"
-	"example/CadastroGo/db"
 	"fmt"
 	_ "fmt"
 )
@@ -15,7 +15,7 @@ type Personal struct {
 	Senha     string `json:"senha"`
 }
 
-func CreateCryptoTable() error {
+func CreatePersonalTable() error {
 	sql := `
 		CREATE TABLE IF NOT EXISTS personal (
 			id SERIAL PRIMARY KEY,

@@ -1,7 +1,8 @@
 package main
 
 import (
-	"example/CadastroGo/routes"
+	"CadastroGo/models"
+	"CadastroGo/routes"
 	"fmt"
 	"github.com/go-chi/chi/v5"
 	"log"
@@ -19,7 +20,7 @@ func main() {
 	}
 
 	models.CreatePersonalTable()
-	models.()
+	models.CreateUserTable()
 
 	r := chi.NewRouter()
 	routes.LoadRoutes(r)

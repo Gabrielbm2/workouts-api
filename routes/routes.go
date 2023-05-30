@@ -10,7 +10,7 @@ import (
 
 func LoadRoutes(routes *chi.Mux) {
 	routes.Get("/ping", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("pong"))
+		_, _ = w.Write([]byte("pong"))
 	})
 
 	routes.Post("/gym/personal/register", controllers.RegisterPersonal)

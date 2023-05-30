@@ -1,4 +1,4 @@
-module example/CadastroGo
+module CadastroGo
 
 go 1.20
 

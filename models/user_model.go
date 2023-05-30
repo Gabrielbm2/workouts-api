@@ -1,14 +1,14 @@
 package models
 
 import (
+	"CadastroGo/db"
 	"context"
-	"example/CadastroGo/db"
 	"fmt"
 	_ "fmt"
 	_ "github.com/lib/pq"
 )
 
-type userRegister struct {
+type UserRegister struct {
 	Nome      string `json:"nome"`
 	Sobrenome string `json:"sobrenome"`
 	Email     string `json:"email"`
